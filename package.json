@@ -1,0 +1,28 @@
+{
+  "name": "devtinder",
+  "version": "1.0.0",
+  "description": "tinder for devs",
+  "keywords": [
+    "node",
+    "js",
+    "javascript"
+  ],
+  "homepage": "https://github.com/koushikbajpayee06/devTinder#readme",
+  "bugs": {
+    "url": "https://github.com/koushikbajpayee06/devTinder/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koushikbajpayee06/devTinder.git"
+  },
+  "license": "ISC",
+  "author": "koushik",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
