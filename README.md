@@ -5,4 +5,7 @@
 - Create a server
 - Listen to port 7777
 - Write request handler for/test , /hello
-- Install nodemon update scripts inside package.json
+- Install nodemon update scripts inside package.
+- What are dependencies
+- What is the use of "-g" while npm install
+- Difference between caret and tilde ( ^ vs ~ )
