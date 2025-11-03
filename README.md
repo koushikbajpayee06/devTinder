@@ -18,3 +18,7 @@ Day-2
 - Play with routes and routes extensions ex. / , /hello , hello/2 /xyz
 - Install Postman app and make a workspace/collection > test API call
 - Write logic to handle GET, POST, PATCH , DELETE API Calls and test the on Postman
+- Explore routing and use of ?, + , (), * in the routes
+- Use of regex in routes /a/, /.*fly$/
+- Reading the query params in the routes
+- Reading the dynamic Routes
