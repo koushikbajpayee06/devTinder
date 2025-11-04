@@ -2,16 +2,20 @@ const express = require("express");
 const app = express();
 
 
-
-app.use("/user",(req,res, next)=>{
-  console.log("Handling the route user-2");
-  res.send("2nd Route Response")
-});
-
-app.use("/user",(req, res, next)=>{
-  console.log("Handling the route user-1");
+app.use('/',(req,res,next)=>{
   next();
+})
+app.get("/user",
+  (req,res, next) => {
+  console.log("This is a middleware");
+  next();
+},(req,res)=>{
+  res.send("This is route handler at it sends response")
+},
+(req,res)=>{
+  res.send("This is route handler at it sends response but this will not execute")
 });
+
 
 
 
