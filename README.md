@@ -26,4 +26,8 @@ Day-2
 
 Day-3
 
+- Multiple Route Handlers -Play with the code
+- next()
+- next function and errors along with res.send()
+- app.use("/routes", rH, [rH2, rH3], rH4, rH5);
 - 
