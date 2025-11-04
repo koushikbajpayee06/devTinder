@@ -11,6 +11,7 @@
 - Difference between caret and tilde ( ^ vs ~ )
 
 Day-2
+
 - intialize git
 - .gitignore
 - create a remote repo on github
@@ -22,3 +23,7 @@ Day-2
 - Use of regex in routes /a/, /.*fly$/
 - Reading the query params in the routes
 - Reading the dynamic Routes
+
+Day-3
+
+- 
