@@ -4,7 +4,8 @@ const app = express();
 
 app.use('/',(req,res,next)=>{
   next();
-})
+});
+
 app.get("/user",
   (req,res, next) => {
   console.log("This is a middleware");

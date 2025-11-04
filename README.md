@@ -30,4 +30,5 @@ Day-3
 - next()
 - next function and errors along with res.send()
 - app.use("/routes", rH, [rH2, rH3], rH4, rH5);
-- 
+- What is middleware 
+- How express JS basicall handles requests behind the scense
