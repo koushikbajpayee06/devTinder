@@ -32,3 +32,4 @@ Day-3
 - app.use("/routes", rH, [rH2, rH3], rH4, rH5);
 - What is middleware 
 - How express JS basicall handles requests behind the scense
+- Difference app.use and app.all
