@@ -35,3 +35,4 @@ Day-3
 - Difference app.use and app.all
 - Write a dummy auth middleware for admin
 - Write a dummy auth for all user routes, expect /user/login
+- Error handling using app.use('/',(err,req,res,next)=>{})
