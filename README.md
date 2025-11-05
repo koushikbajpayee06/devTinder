@@ -39,3 +39,7 @@ Day-3
 
 Day-4
 
+- Create a free cluster on MongoDB official Website(Mongo Atlas)
+- Install mongoose library
+- Connect your application to the Database<"Connection-url">/devTinder
+- Call the connectDB function and connect to database before starting application on 7777
