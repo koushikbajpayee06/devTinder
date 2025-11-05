@@ -7,9 +7,5 @@ const connectDB = async()=> {
     );
 };
 
-connectDB()
-    .then(()=>{
-        console.log("Database connection established...")
-    }).catch(err=>{
-        console.log("Database cant be connected...")
-    });
+module.exports = connectDB;
+
