@@ -1,24 +1,6 @@
 const express = require("express");
+require('./config/database');
 const app = express();
-
-const  {adminAuth, userAuth}  = require('./middlewares/auth');
-
-
-app.get("/getUserData", (req,res)=>{
-  // Logic of DB call and get data
-  try {
-      throw  new Error("jhghdrdh");
-      res.send("User Data Send"); 
-  } catch (error) {
-      res.status(500).send("something went wrong, contact support team")
-  }
-});
-
-app.use('/', (err,req,res,next)=>{
-  if(err){
-    res.status(500).send("something went wrong");
-  }
-})
 
 
 app.listen(3000, () => {

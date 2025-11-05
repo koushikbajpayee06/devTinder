@@ -36,3 +36,6 @@ Day-3
 - Write a dummy auth middleware for admin
 - Write a dummy auth for all user routes, expect /user/login
 - Error handling using app.use('/',(err,req,res,next)=>{})
+
+Day-4
+
