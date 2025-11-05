@@ -46,4 +46,4 @@ Day-4
 - Create a UserSchema & user Model
 - Create POST /signup API to add data to database
 - Push some documents using API calls from postman 
-
+- Error Handling using try, catch
