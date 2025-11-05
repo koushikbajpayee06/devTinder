@@ -1,6 +1,21 @@
 const express = require("express");
 const connectDB = require('./config/database');
 const app = express();
+const User = require("./models/user")
+
+app.post("/signup",async (req,res)=>{
+// Creating a new instance of the user Model
+  const user = new User({
+    firstName: "Koushik",
+    lastName: "Bajpayee",
+    emailId:"koushik@gmail.com",
+    password:"Baju@1234"
+  });
+  
+  await user.save();
+  res.send("User added successfully")
+
+})
 
 connectDB()
     .then(()=>{

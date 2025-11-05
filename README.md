@@ -43,3 +43,5 @@ Day-4
 - Install mongoose library
 - Connect your application to the Database<"Connection-url">/devTinder
 - Call the connectDB function and connect to database before starting application on 7777
+- Create a UserSchema& user Model
+
