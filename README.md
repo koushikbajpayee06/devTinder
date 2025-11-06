@@ -51,7 +51,10 @@ Day-4
 
 Day-5
 - Difference b/w JS Object and JSON.
-- Add the express.json middleware to your app
+- Add the express.json middleware to your app.
 - Make your signuup API synamic to recive data from the end user.
+- User.findOne With duplicate email ids, Which object returned.
+- API- Get user by email
+- API - Feed API - GET/feed - get all the users from the database
 
 
