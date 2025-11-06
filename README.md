@@ -47,3 +47,11 @@ Day-4
 - Create POST /signup API to add data to database
 - Push some documents using API calls from postman 
 - Error Handling using try, catch
+
+
+Day-5
+- Difference b/w JS Object and JSON.
+- Add the express.json middleware to your app
+- Make your signuup API synamic to recive data from the end user
+
+
