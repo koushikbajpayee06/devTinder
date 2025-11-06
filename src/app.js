@@ -39,8 +39,8 @@ app.get("/user",async(req,res)=>{
   catch(err){
     res.status(400).send("Something Went Wrong")
   }
-})
-
+});
+// Feed API - GET/feed - get all the users from the database
 app.get("/feed",async(req,res)=>{
 
   try{
@@ -51,7 +51,20 @@ app.get("/feed",async(req,res)=>{
   catch(err){
     res.status(400).send("Something Went Wrong")
   }
-})
+});
+
+// Delete a user from database
+app.delete('/user',async(req,res)=>{
+  const userId = req.body.userId;
+  try{
+    const user = await User.findByIdAndDelete({_id:userId})
+    // const user = await User.findByIdAndDelete(userId);
+    res.send("User deleated successfully");
+  }
+  catch(err){
+    res.status(400).send("Something Went Wrong")
+  }
+});
 
 connectDB()
     .then(()=>{

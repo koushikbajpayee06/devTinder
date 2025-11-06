@@ -56,5 +56,7 @@ Day-5
 - User.findOne With duplicate email ids, Which object returned.
 - API- Get user by email
 - API - Feed API - GET/feed - get all the users from the database
+- API - Get user by Id
+- Create a delete user API
 
 
