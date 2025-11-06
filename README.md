@@ -52,6 +52,6 @@ Day-4
 Day-5
 - Difference b/w JS Object and JSON.
 - Add the express.json middleware to your app
-- Make your signuup API synamic to recive data from the end user
+- Make your signuup API synamic to recive data from the end user.
 
 
