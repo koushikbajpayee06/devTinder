@@ -58,5 +58,10 @@ Day-5
 - API - Feed API - GET/feed - get all the users from the database
 - API - Get user by Id
 - Create a delete user API
+- Difference b/w PATCH and PUT.
+- API -Ipdate a user.
+- Explore the Mongoode Documentation for Model Methods
+- What are options in a Model-findaoaneAndUpdate meyhods, explore more about it/
+- API - Update the user with email ID
 
 
