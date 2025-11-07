@@ -75,4 +75,6 @@ Day-6
 - DATA Sanitizing -Add API validation for each 
 - API level validation on Patch request & Signup Post api
 - DATA Sanitizing - Add API Validation for each field 
+- Install validator
+- Explore the validator library functions and us validator functions for password, email, photourl
 
