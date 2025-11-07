@@ -64,4 +64,11 @@ Day-5
 - What are options in a Model-findaoaneAndUpdate meyhods, explore more about it/
 - API - Update the user with email ID
 
+Day-6
+- Explore schematype options from the documentation
+- Add a required, unique, lowercase, min, minlength, trim,
+- Add default
+- Create a custom validate function for gender
+- Improve the DB Schema -PUT all required validations on each field in Schema.
+- Add timestamp to the userSchema
 
