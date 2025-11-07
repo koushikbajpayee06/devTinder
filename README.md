@@ -79,3 +79,8 @@ Day-6
 - Explore the validator library functions and us validator functions for password, email, photourl
 - NEVER TRUST req.body
 
+
+Day-7
+- Validate data in signup API
+- Install bcrypt package
+- Create a PasswordHash using bcrypt.hash & save the user is excrupted password
