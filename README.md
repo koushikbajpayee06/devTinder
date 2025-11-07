@@ -72,5 +72,7 @@ Day-6
 - Improve the DB Schema -PUT all required validations on each field in Schema.
 - Add timestamp to the userSchema
 - Add API level validation on Patch request & Signup post api
-- DATA Sanitizing -Add API validation for each field
+- DATA Sanitizing -Add API validation for each 
+- API level validation on Patch request & Signup Post api
+- DATA Sanitizing - Add API Validation for each field 
 
