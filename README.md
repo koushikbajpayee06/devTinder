@@ -77,4 +77,5 @@ Day-6
 - DATA Sanitizing - Add API Validation for each field 
 - Install validator
 - Explore the validator library functions and us validator functions for password, email, photourl
+- NEVER TRUST req.body
 
