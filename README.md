@@ -84,3 +84,4 @@ Day-7
 - Validate data in signup API
 - Install bcrypt package
 - Create a PasswordHash using bcrypt.hash & save the user is excrupted password
+- 

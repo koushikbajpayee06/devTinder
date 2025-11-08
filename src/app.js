@@ -56,6 +56,30 @@ app.get("/user",async(req,res)=>{
     res.status(400).send("Something Went Wrong")
   }
 });
+
+app.post("/login", async(req,res)=>{
+  try{
+    const {emailId, password} = req.body;
+
+    const user = await User.findOne({emailId:emailId});
+    if(!user){
+      throw new Error("Email Id is not present in DB");
+    }
+
+    const isPasswordValid = await bcrypt.compare(password,user.password);
+
+    if(isPasswordValid){
+      res.send("Login Successfull!!!")
+    }
+    else{
+      throw new Error("Password is not correct");
+    }
+
+  }
+  catch(err){
+    res.status(400).send("ERROR: " + err.message)
+  }
+})
 // Feed API - GET/feed - get all the users from the database
 app.get("/feed",async(req,res)=>{
 
