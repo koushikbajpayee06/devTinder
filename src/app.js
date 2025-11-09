@@ -70,20 +70,16 @@ app.post("/login", async(req,res)=>{
       throw new Error("Invalid Crediantials");
     }
 
-    const isPasswordValid = await bcrypt.compare(password,user.password);
+    const isPasswordValid = await user.validatePassword(password)
 
     if(isPasswordValid){
+      const token = await user.getJWT();
 
-      // Create a JWT Token
-      const token = await jwt.sign({_id:user._id}, "DEV@Tinder$790",{expiresIn:"2d"});
-      // console.log(token);
-      // Add the Token to cookie and send the response back to the user
       res.cookie("token", token,{
         expires: new Date(Date.now()+8*3600000),
       });
-    res.send("Login Successfull!!!");
-    }
-    else{
+      res.send("Login Successfull!!!");
+    }else {
       throw new Error("Invalid Crediantials");
     }
 
@@ -91,7 +87,7 @@ app.post("/login", async(req,res)=>{
   catch(err){
     res.status(400).send("ERROR: " + err.message)
   }
-})
+});
 
 app.get('/profile', userAuth, async(req,res)=>{
   try
