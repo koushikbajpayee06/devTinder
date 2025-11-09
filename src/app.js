@@ -4,8 +4,10 @@ const app = express();
 const User = require("./models/user");
 const { validateSignupData }= require('./utils/validations');
 const bcrypt = require("bcrypt");
+const cookieParser = require("cookie-parser");
 
 app.use(express.json());
+app.use(cookieParser());
 
 app.post("/signup",async (req,res)=>{
   try{
@@ -69,6 +71,12 @@ app.post("/login", async(req,res)=>{
     const isPasswordValid = await bcrypt.compare(password,user.password);
 
     if(isPasswordValid){
+
+      // Create a JWT Token
+      // Add the Token to cookie and send the response back to the user
+      res.cookie("token", "jffeofslmcknkdojejfjjeofeopfmlskfnklsnfklewihfihe")
+
+
       res.send("Login Successfull!!!")
     }
     else{
@@ -79,6 +87,12 @@ app.post("/login", async(req,res)=>{
   catch(err){
     res.status(400).send("ERROR: " + err.message)
   }
+})
+
+app.get('/profile',async(req,res)=>{
+  const cookie = req.cookies;
+  console.log(cookie);
+  res.send("Reading Cookies");
 })
 // Feed API - GET/feed - get all the users from the database
 app.get("/feed",async(req,res)=>{

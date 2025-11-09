@@ -84,4 +84,14 @@ Day-7
 - Validate data in signup API
 - Install bcrypt package
 - Create a PasswordHash using bcrypt.hash & save the user is excrupted password
-- 
+- Create login API
+- Compare passwords and throw errors if any emails or password is invalid.
+-
+
+Day-8
+- Install cookie-parse
+- Just send a dummy cookie to user
+- create GET/profile API and check if you get the cookie back
+- install jsonwebtoken
+- In login API, after email and password validation , create a JWT token and send it to user in cookies
+- read the cookies inside your profile API and find the loggedin usme
