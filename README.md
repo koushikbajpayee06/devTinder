@@ -94,4 +94,4 @@ Day-8
 - create GET/profile API and check if you get the cookie back
 - install jsonwebtoken
 - In login API, after email and password validation , create a JWT token and send it to user in cookies
-- read the cookies inside your profile API and find the loggedin usme
+- read the cookies inside your profile API and find the loggedin user
