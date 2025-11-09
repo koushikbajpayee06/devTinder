@@ -100,8 +100,11 @@ app.get('/profile',async(req,res)=>{
   console.log(decodedMessage);
   const{_id} = decodedMessage;
   console.log("Logged In user is:" + _id);
+
+  const user = await User.findById(_id);
+
   // console.log(cookies);
-  res.send("Reading Cookies");
+  res.send(user);
 })
 // Feed API - GET/feed - get all the users from the database
 app.get("/feed",async(req,res)=>{
