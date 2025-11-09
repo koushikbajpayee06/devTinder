@@ -5,6 +5,7 @@ const User = require("./models/user");
 const { validateSignupData }= require('./utils/validations');
 const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
+const jwt = require("jsonwebtoken");
 
 app.use(express.json());
 app.use(cookieParser());
@@ -73,8 +74,10 @@ app.post("/login", async(req,res)=>{
     if(isPasswordValid){
 
       // Create a JWT Token
+      const token = await jwt.sign({_id:user._id}, "DEV@Tinder$790");
+      console.log(token);
       // Add the Token to cookie and send the response back to the user
-      res.cookie("token", "jffeofslmcknkdojejfjjeofeopfmlskfnklsnfklewihfihe")
+      res.cookie("token", token)
 
 
       res.send("Login Successfull!!!")
