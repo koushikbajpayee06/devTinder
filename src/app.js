@@ -93,19 +93,29 @@ app.post("/login", async(req,res)=>{
 })
 
 app.get('/profile',async(req,res)=>{
-  const cookies = req.cookies;
-  const {token} = cookies;
-  // validating my token
-  const decodedMessage = await jwt.verify(token,"DEV@Tinder$790")
-  console.log(decodedMessage);
-  const{_id} = decodedMessage;
-  console.log("Logged In user is:" + _id);
+  try
+  {  
+    const cookies = req.cookies;
+    const {token} = cookies;
+    if(!token){
+      throw new Error("Invalid Token");
+    }
+    
+    // validating my token
+    const decodedMessage = await jwt.verify(token,"DEV@Tinder$790")
+    console.log(decodedMessage);
+    const{_id} = decodedMessage;
+    console.log("Logged In user is:" + _id);
 
-  const user = await User.findById(_id);
+    const user = await User.findById(_id);
 
-  // console.log(cookies);
-  res.send(user);
-})
+    // console.log(cookies);
+    res.send(user);}
+      catch(err){
+    res.status(400).send("ERROR: " + err.message)
+  }
+  }
+)
 // Feed API - GET/feed - get all the users from the database
 app.get("/feed",async(req,res)=>{
 
