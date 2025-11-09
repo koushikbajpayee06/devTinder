@@ -93,8 +93,14 @@ app.post("/login", async(req,res)=>{
 })
 
 app.get('/profile',async(req,res)=>{
-  const cookie = req.cookies;
-  console.log(cookie);
+  const cookies = req.cookies;
+  const {token} = cookies;
+  // validating my token
+  const decodedMessage = await jwt.verify(token,"DEV@Tinder$790")
+  console.log(decodedMessage);
+  const{_id} = decodedMessage;
+  console.log("Logged In user is:" + _id);
+  // console.log(cookies);
   res.send("Reading Cookies");
 })
 // Feed API - GET/feed - get all the users from the database
