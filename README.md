@@ -108,3 +108,8 @@ Dat-9
 - Explore tinder APIs
 - Create a list of API you can think of in Dev Tinder
 - Group multiple routes under respective routers 
+- Read documentation for express.Router
+- Create routes folder for managing auth, profile,request routers
+- Create authRouter, profileRouter, requestRouter
+- Import these routers in app.js
+
