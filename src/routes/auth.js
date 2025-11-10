@@ -6,6 +6,7 @@ const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 
 
+
 authRouter.post("/signup",async (req,res)=>{
   try{
       validateSignupData(req);
