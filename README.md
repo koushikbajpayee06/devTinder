@@ -102,3 +102,9 @@ Day-8
 - Create UserSchema method to comparepassword(passwordInputByUser)
 - Create userSchema method to getJWT()
 - Create UserSchema method to comparepassword(password)
+
+
+Dat-9
+- Explore tinder APIs
+- Create a list of API you can think of in Dev Tinder
+- Group multiple routes under respective routers 
