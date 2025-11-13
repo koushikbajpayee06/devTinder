@@ -115,4 +115,4 @@ Dat-9
 - Create POST //logout API
 - Create PATCH/profile/edit
 - Create PATCH /profile/password API => forgit password API
-- Makey=sure you validate all data in every POST,PATCH APIs 
+- Makey sure you validate all data in every POST,PATCH APIs 
