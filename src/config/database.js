@@ -1,10 +1,12 @@
 const mongoose = require('mongoose')
 
-const users = mongoose.Schema({
+const userSchema = mongoose.Schema({
     firstName:{
         type:String
     },
     lastName:{
         type:string
     }
-})
+});
+
+const User = mongoose.model("User",userSchema)
