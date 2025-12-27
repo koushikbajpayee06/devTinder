@@ -1,11 +1,12 @@
 {
   "name": "devtinder",
   "version": "1.0.0",
-  "description": "tinder for devs",
+  "description": "tinder for developers",
   "keywords": [
-    "node",
-    "js",
-    "javascript"
+    "nodejs",
+    "javascript",
+    "express",
+    "mongoose"
   ],
   "homepage": "https://github.com/koushikbajpayee06/devTinder#readme",
   "bugs": {
@@ -20,16 +21,13 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
     "dev": "nodemon src/app.js"
   },
   "dependencies": {
-    "bcrypt": "^6.0.0",
-    "cookie-parser": "^1.4.7",
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.19.3",
-    "validator": "^13.15.20"
+    "express": "^5.2.1",
+    "mongoose": "^9.0.2",
+    "nodemon": "^3.1.11"
   }
 }

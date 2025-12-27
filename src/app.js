@@ -1,32 +1,29 @@
-const express = require("express");
-const connectDB = require('./config/database');
-const cors = require('cors')
+const express = require('express');
 const app = express();
-const cookieParser = require("cookie-parser");
-
+const {adminAuth, userAuth} = require('./middlewares/auth.js')
 app.use(express.json());
-app.use(cookieParser());
-app.use(cors({
-    origin:"http://localhost:5173",
-    credentials: true
-}));
-
-const authRouter = require('./routes/auth');
-const profileRouter = require('./routes/profile');
-const requestRouter = require('./routes/request');
-
-app.use("/",authRouter);
-app.use("/",profileRouter);
-app.use("/",requestRouter);
-
-connectDB()
-    .then(()=>{
-        console.log("Database connection established...")
-        app.listen(3000, () => {
-          console.log("Server successfully running on Port 3000");
-        });
-    }).catch(err=>{
-        console.log("Database cant be connected...");
-    });
 
 
+app.use('/admin',adminAuth)
+
+app.get('/admin/getData',(req,res,next)=>{
+    res.send("All data send")
+});
+
+app.post('/admin/update',(req,res,next)=>{
+    // Logic of fetching all data
+    res.send("Updated...");
+});
+app.post('/admin/delete',(req,res,next)=>{
+    // Logic of fetching all data
+    res.send("Deleated...");
+});
+app.post('/user',userAuth,(req,res,next)=>{
+    // Logic of fetching all data
+    res.send("Deleated...");
+});
+
+
+app.listen(7777,()=>{
+    console.log('server is listning...')
+})
