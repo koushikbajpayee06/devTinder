@@ -23,10 +23,10 @@ app.post('/user',userAuth,(req,res,next)=>{
     res.send("Deleated...");
 });
 
-app.use('/',(err,req,res,next)=>{
-    if(err){
-        res.status(500).send("something went wrong..")
-    }
+
+
+app.use((err, req, res, next) => {
+    res.status(500).send("Server Error");
 });
 
 
