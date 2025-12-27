@@ -23,6 +23,12 @@ app.post('/user',userAuth,(req,res,next)=>{
     res.send("Deleated...");
 });
 
+app.use('/',(err,req,res,next)=>{
+    if(err){
+        res.status(500).send("something went wrong..")
+    }
+});
+
 
 app.listen(7777,()=>{
     console.log('server is listning...')
